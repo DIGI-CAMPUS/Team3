@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>문의 사항</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_junhyeok.css" />
+  </head>
+  <body> 
+    <div id="container">
+      <h1> 
+        <BR>
+        <ul>
+          <li>
+            <span id="logo">Dream Seoul</span>
+          </li>
+          <li> 단체여행 
+            <ul>
+              <li> 해외연수</li>
+              <li> 수학여행</li>
+            </ul>
+          </li>
+          <li> 맞춤 여행
+            <ul>
+              <li> 성곽 기행</li>
+              <li> DDP 체험</li>
+              <li> 힐링 워크샵</li>
+            </ul>
+          </li>  
+          <li> 갤러리
+          </li>  
+          <li> 문의하기
+          </li>  
+        </ul>
+      </h1>
+      <form id="contentsbox" >
+        <fieldset id = "fieldset1">
+          <legend> <b>개인정보</b> </legend>    
+          <ul>
+            <li>
+              <label id="a0" for="uid">이름         </label>
+              <input type="text" id="uid" autofocus placeholder="공백없이!" required> 
+            </li>
+            <li>
+              <label id="a1" for="umail">이메일</label>
+              <input type="email" id="umail" placeholder="gmail을 권유합니다" required> 
+            </li>
+            <li>
+              <label id="a2" for="pwd1">비밀번호 &nbsp  &nbsp</label>
+              <input type="password" id="pwd1" placeholder="숫자 4자리/생년월일 혹은 전화번호는 삼가해주세요" required> 
+            </li>        
+            <li>
+              <label id="a3" for="pw2">비밀번호 확인</label>
+              <input type="password" id="pwd2"placeholder="동일한 패스워드 입력해주세요~!" required> 
+            </li>
+            <li>
+              <label id="a4" for="expdate">방문예정일</label>
+              <input type="date" id="expdate"  required>
+            </li>
+          </ul>      
+        </fieldset>
+
+        <fieldset id="fieldset2">
+            <li>
+                <lable for="qtitle"> <strong>제목</strong> </lable>
+                <input type="text" id="qtitle"placeholder="제목은 간단하게!" required>
+            </li>
+            <li>
+                <lable for="qcategory"><b>질문종류</b></lable>
+                <br>
+                <label id = "qanswer1"><input type="checkbox" id = "qanswer2" name="qanswer" value="c_1">숙박관련</label>
+                <label id= "qanswer1"><input type="checkbox" id = "qanswer2" name="qanswer" value="c_2">교통관련</label>
+                <label id= "qanswer1"><input type="checkbox" id = "qanswer2" name="qanswer" value="c_3">식당관련</label>
+                <label id= "qanswer1"><input type="checkbox" id = "qanswer2" name="qanswer" value="c_4">기타</label>
+            </li>
+            <li>
+                <lable for ="qcontents"><b>내용</b></lable>
+                <br>
+                <textarea rows="12" cols="30" name="qcontents" id="qcontents" autocomplete="off"> 
+"아래는 대표양식입니다. 지워서 작성해주시되 양식을 지켜주세요."
+동행인원 : 5인
+회신 가능한 전화번호 : 010-xxxx-xxxx (미기입시 e-mail로만 회신합니다.)
+여행 컨셉 : 가족여행입니다. or 연인과의 여행입니다.
+질문사항 : (1) 홍길동 올래국수는 네이버페이로 예약이 가능한가요?
+                (2) 공항에서 리무진버스 예약을 할 수 있나요?
+                </textarea>
+            </li>                        
+        </fieldset>
+
+        <fieldset id="fieldset3">
+          <legend><b>추가사항</b></legend>
+            <form action="" method="post" enctype="multipart/form-data" >
+                <label for ="addfile"> 첨부파일(4MB 용량제한이 있습니다!) </label>
+                <input id="a5" type="file" >
+            </form>         
+            <br>
+          <input type="radio" name="mailing" id="mailing_y" value="mailing_yes">
+          <label id = "qanswer1" for="mailing_y">게시물 공개</label>
+          <input type="radio" name="mailing" id="mailing_n" value="mailing_no" checked>
+          <label id = "qanswer1" for="mailing_n">게시물 비공개</label>     
+        </fieldset>
+      </form>
+    </div>
+    <div id="buttons2">
+      <input id="buttons" type="submit" value="제출">
+      <input id="buttons" type="reset" value="취소">
+      <input id="buttons" type="button" value="메뉴로 돌아가기">
+    </div>
+    <footer>    
+      <div id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">여행약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+      </div>
+      <div id="company">
+        <p>서울시 광진구 아차산로 (대표전화) 123-456-7890</p> 
+      </div>     
+    </footer>            
+  </body>
+</html>
