@@ -1,0 +1,87 @@
+body {
+	margin: 0 auto;
+	margin-left: 400px;
+	margin-top: 10vw;
+	display: grid;
+	grid-template-columns: 200px 400px 200px;
+	grid-template-rows: 60vh 30vh 10vh;
+	grid-template-areas:
+		"1 ab 3"
+		"1 4 3"
+		"1 aa 3";
+}
+.findpw {
+	text-align: center;
+}
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.loginbox {
+	background: #fff;
+	width: 350px;
+	height: 380px;
+	border: 1px solid #dbdbdb;
+	margin-bottom: 0.6rem;
+	grid-area: "ab";
+}
+
+.loginBtn {
+	width: 230px;
+	margin-left: 5vw;
+}
+
+.or_line {
+	margin-left: 13vw;
+}
+
+.findpw {
+	margin-left: -3vw;
+}
+.right {
+	grid-area: "3";
+	margin-left: 3vw;
+}
+
+.elsebox {
+	grid-area: "4";
+}
+
+.otherbox {
+	grid-area: "aa";
+}
+
+.brand_logo {
+	display: block;
+	width: 15rem;
+	margin: 0 auto;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+input {
+	display: block;
+	width: 250px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	text-indent: 5px;
+	outline-color: gray;
+}
+
+input:first-child {
+	margin-bottom: 0.5rem;
+}
+input:nth-child(2) {
+	margin-bottom: 1.5rem;
+}
+
+.left {
+	grid-area: "1";
+}

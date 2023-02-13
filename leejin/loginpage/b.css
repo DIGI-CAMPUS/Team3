@@ -1,0 +1,70 @@
+body {
+	margin-left: 40vw;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 20vh 70vh 10vh;
+	grid-template-areas:
+		"1"
+		"a"
+		"b";
+}
+
+.loginbox {
+	border: 1px gray;
+	width: 500px;
+	height: 500px;
+	padding: 10px;
+	border: 1px solid #dbdbdb;
+	display: grid;
+}
+
+.id,
+.pwd {
+	/* padding: 2px 100px; */
+	width: 28vw;
+	box-align: center;
+	box-sizing: border-box;
+	outline: 0px;
+}
+.header {
+	grid-area: "1";
+	width: 100px;
+}
+
+.remain {
+	text-align: center;
+}
+
+.line_or {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 10px;
+	color: gray;
+}
+.brand_logo {
+	margin-top: 7vh;
+	margin-left: 9vw;
+	width: 100px;
+}
+.loginbox {
+	grid-area: "a";
+}
+.button {
+	border-radius: 10px;
+	width: 20vw;
+	height: 1vw;
+	color: yellow;
+}
+.loginBtn {
+	border-color: white;
+	border-radius: 7px;
+	background-color: yellow;
+}
+
+.qrBtn {
+	border-color: white;
+	border-radius: 7px;
+}
+.footer {
+	grid-area: "b";
+}
