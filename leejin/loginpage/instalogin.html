@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel = "stylesheet" href="instalogin.css">
+        <title>Document</title>
+	</head>
+	<body>
+		<h1>로그인페이지</h1>
+        <div class="loginbox">
+
+        
+		    <label>
+			    1. 아이디를 입력하세요:
+			<input type="text" name="login_id" id="login_id" />
+		    </label>
+		    <br />
+		    <label>
+			2. 비밀번호를 입력하세요:
+			<input type="text" name="login_pw" id="login_pw" />
+		    </label>
+		    <button onclick="login()">로그인하기</button>
+
+        </div>
+
+        <div class="undercontainer">
+
+
+
+        </div>
+
+        <script>
+             let button_control = document.querySelector("button") 
+             console.log(button_control)
+
+
+            let id_control = document.querySelector("#login_id")
+            console.log(id_control)
+
+            let pw_control = document.querySelector("#login_pw")
+            console.log(pw_control)
+
+            function login(){
+                let idBox = id_control.value;
+                let pwBox = pw_control.value;
+                // console.log(idBox)
+                // console.log(pwBox)
+
+                if ( idBox === "digi" && pwBox === "1004"){
+                    alert("로그인 성공")
+                    location.reload()
+                } else {alert("로그인 실패") 
+                location.reload()
+}
+            }
+
+	 
+        
+
+        </script>
+</html>
