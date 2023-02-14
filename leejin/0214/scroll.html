@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>scrollTo</title>
+		<style>
+			body {
+				width: 5000px;
+				height: 5000px;
+				background: linear-gradient(hotpink, pink);
+			}
+			div {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+			}
+
+			/* body {
+				width: 5000px;
+				height: 5000px;
+				background: linear-gradient(red, blue);
+			}
+			div {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+			} */
+		</style>
+	</head>
+	<body>
+		<!-- <div>
+			<button onclick="sTo()">scrollTo(100, 200)</button>
+			<button onclick="sBy()">scrollBy(100, 200)</button>
+		</div>
+		<script>
+			function sTo() {
+				window.scrollTo({ top: 4000, behavior: "smooth" }); //x좌표 y좌표
+				//window.scrollTo{left:100 , top:200 };
+			}
+
+			function sBy() {
+				window.scrollBy({ top: 200, behavior: "smooth" }); //x좌표 y좌표
+				//window.scrollBy{left:100 , top:200 };
+			}
+		</script> -->
+
+		<div>
+			<button onclick="sTo()">scrollTo(100,200</button>
+			<button onclick="sBy()">scrollBy(100,200</button>
+		</div>
+		<script>
+			function sTo() {
+				window.scrollTo({ top: 4000, behavior: "smooth" });
+				//window.scrollTo(100,200);//x, y좌표로 이동. 사용법 : 회원가입 시 누락된 부분이 있다면 그쪽으로 이용하도록
+				//window.scrollTo{left : 100, top : 200};
+			}
+			function sBy() {
+				window.scrollBy({ top: 600, behavior: "smooth" });
+				//window.scrollBy(100,200);//x, y좌표
+				//window.scrollBy{left : 100, top : 200};
+			}
+		</script>
+	</body>
+</html>

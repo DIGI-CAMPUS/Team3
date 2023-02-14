@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=
+    , initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link rel="stylesheet" href="b.css" />
+	</head>
+	<body>
+		<header>
+			<img class ="brand_logo" src="kakao.png" 	alt="logo" ></img>
+ 
+			
+		</header>
+		<div class="loginbox">
+			<input class= "id" type = "text" placeholder="카카오메일 아이디, 이메일, 전화번호">	
+           	 <input class= "pwd" type = "password" placeholder="비밀번호">     
+	
+			<div class="item_choice"><input type="checkbox" id="staySignedIn--3" class="inp_choice" name="staySignedIn" value="false">
+				<label class="lab_choice"  for="staySignedIn--3" id="label-staySignedIn"><span class="ico_comm ico_check"></span>
+					로그인 상태 유지</label><button type="button" background-color="white" class="btn_help" aria-haspopup="true" 
+					aria-describedby="label-staySignedIn"><img src="i.png"  width="20px"  alt="information" ></button>
+				</div>
+			<button class = "loginBtn" button onclick="login()"><a href ="#">로그인</a></button>   
+            <span class="line_or"><span class="txt_or">또는</span></span>
+            <button class = "qrBtn"><a href="https://accounts.kakao.com/qr_login?app_type=web&continue=https%3A%2F%2Flogins.daum.net%2Faccounts%2Fksso.do%3Frescue%3Dtrue%26url%3Dhttps%253A%252F%252Fwww.daum.net&lang=ko&moveToQr=true&staySignedIn=false">QR코드 로그인</a></button>   
+			<footer><a class="join" href="https://accounts.kakao.com/weblogin/create_account/">회원가입</a>
+				<a class="forgot
+				" href="https://accounts.kakao.com/weblogin/find_password?app_type=web&continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Funify_account%3Fcontext%3Ddaum%26continue%3Dhttps%253A%252F%252Fwww.daum.net%26skip_intro%3Dtrue&lang=ko">아이디/비밀번호 찾기</a></footer> 
+			
+        </div>
+		
+	</body>
+	<script>
+   let button_control = document.querySelector("button")
+             console.log(button_control)
+
+
+            let id_control = document.querySelector(".id")
+            console.log(id_control)
+
+            let pw_control = document.querySelector(".pwd")
+            console.log(pw_control)
+
+            function login(){
+                let idBox = id_control.value;
+                let pwBox = pw_control.value;
+                // console.log(idBox)
+                // console.log(pwBox)
+
+                if ( idBox === "digi" && pwBox === "1004"){
+                    alert("로그인 성공")
+                    location.reload()
+                } else {alert("로그인 실패")
+                location.reload()
+}
+            }
+
+
+
+
+     
+	</script>
+</html>

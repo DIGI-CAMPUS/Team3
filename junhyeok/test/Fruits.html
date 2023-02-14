@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Buy Fruits! </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+</head>
+<style>
+    html, body {margin: 0; padding: 0; height:100%;}
+    header{width:100%; height: 5%; background:#AD17C0 ;}
+    section{width:100%; height:77%;float:left;background:#CE50EE;}
+    footer{width:100%; height:20%;float:left;background:#DB78E8  ;}
+        body {
+            font-size : 40px; 
+            font-family : "Nanum Brush Script";
+            text-align : center;
+        }
+        .regular {
+            font-weight : 400;  
+        }
+        b1{
+            font-size : 30px;
+            font-family : italic;
+            text-align : center;
+            color : white;
+        }
+        b2{
+            font-size : 20px;
+            font-family : italic;
+            color : white;
+            text-align : center;
+        }
+        table, th, td {
+            border : 1px solid '#bcbcb';
+        }
+        .jb-th-1 {
+             width: 150px;
+         }
+        table {
+            margin-left :auto;
+            margin-right : auto;
+            width : 60%;
+            background-color: white;
+        }
+        th{
+            background-color: #DB78E8;
+        }
+        th:nth-child(even){
+            color : red;
+        }
+        tr.row:nth-child(odd){
+            background-color:#DB78E8;
+        }
+        td:nth-child(even){
+            color : red;
+        }
+</style>
+<body>
+    <header class="header">  <p> <strong> <b1>과일 판매합니다.</b1></strong> </p> 
+    </header>
+    <section class="section">
+    <table border="1    ">
+        <th> 이미지 </th>
+        <th> 이름 </th>
+        <th> 가격(개당) </th>
+        <th>  원산지 </th>
+        <tr class = "row">
+            <td> <img src = "https://src.hidoc.co.kr/image/lib/2021/9/17/1631863503853_0.jpg" alt = "사과" style ="width : 110px; height: 110px;""></td>
+            <td> 사과 </td>
+            <td> 1000원 </td>
+            <td> <img src = "https://w.namu.la/s/488a9fbef65fb76fde0be88ec5f7c911b6e8cb09ad0329fca66a4c2bd1e5cf8d794d02687e7addb356bf581047ac8ba74d6be8f49cfc1e279b257224d5d994952f20f0778ea5e4607428dccd67aa0c44ba2f78db91d4cdf0d7da03ccf4b18d71"  style ="width : 50px; height: 50px;" ">경북 양산 </td>
+        </tr><!-- 첫번째 줄 끝 -->
+        <tr class = "row">
+            <td> <img src = "https://health.chosun.com/site/data/img_dir/2022/05/04/2022050401754_0.jpg" alt = "바나나"style ="width : 110px; height: 110px;"> </td>
+            <td> 바나나 </td>
+            <td> 500원 </td>
+            <td> <img src = "https://w.namu.la/s/9d982f29d853f7e7ca925f03112153bb4eb4cf7b79a365d0cbd025c597e98db86c8f2640d1a57ec6934228f153e84ba010a2f1b8a2d3d385372dc3875a5dd9f448a683a2ae5a7caee6eb1e73a25d72bc7a8555a1751bd0af7f24d5b0eeb8b086"  style ="width : 50px; height: 50px;"">필리핀 마닐라 </td>
+        </tr><!-- 두번째 줄 끝 -->
+        <tr class = "row">
+            <td> <img src = "https://blog.kakaocdn.net/dn/BMDMO/btrcqyx3OQb/EqHPDIE0LNxJfO6aEhkBj1/img.jpg" alt="자몽"style ="width : 110px; height: 110px;"> </td>
+            <td> 자몽 </td>
+            <td> 3000원 </td>
+            <td>  <img src = "https://w.namu.la/s/e041fceeacc6b0c1ec78be652a33ed00a4855a6ef6527ec9b6d4f84c81f62cb07b441d1dde2a72008c3beb1736805dc55e2ae52d37a97d76617de9714b93fbde4269970ff9802030562a8971b6be1fc5ba13707c69db2720fc7aa989c0a1b3bb"  style ="width : 50px; height: 50px;"">멕시코 북부 </td>
+        </tr>
+        <tr class = "row">
+            <td> <img src = "https://w.namu.la/s/c3d7127c67f6c8343c6b03c53966b07e36f880e44511a3e2c3fa259594a54b9991f04ce41e003f9c54a07c5779dca42a94725fb53a89ce9c94dc38c398c470d521e65904f41d8adf131491bad06579181f6f4157dcab0fba8cf717a0907eb3a6" alt="파인애플"style ="width : 110px; height: 110px;"> </td>
+            <td> 파인애플 </td>
+            <td> 6000원 </td>
+            <td> <img src = "https://w.namu.la/s/82e8f0ba23b7861b4ae69bcf0523076d2151136ad3591c81e8cb49e563a6c46a9faaaa519f1f60a1f581714ddcf63c8c8c22d79c9e93ba0b010ca00663baf82931f0b290f1bcfc23aea8a0dba891e2c6c4aa7e3f8c2b55d4c38269957cd53dcb"  style ="width : 50px; height: 50px;"">미국 알라배마주 </td>
+        </tr>
+    </table>
+    </section>
+    <footer class="footer">
+    <b2> 
+    <b>
+    <ol> <구매시 주의사항>
+        <li>환불은 불가합니다.</li>
+        <li> 3일 이내 불량품에 한해 교환가능합니다.</li>
+        <li>카드 결제 불가합니다.</li>
+    </ol>
+    </b>
+    </b2>
+    </footer> 
+</body>
+</html>

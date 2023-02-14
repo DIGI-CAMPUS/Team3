@@ -1,0 +1,120 @@
+body {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 20vh 80vh 10vh;
+	grid-template-areas:
+		"1"
+		"a"
+		"b";
+}
+
+.loginbox {
+	border: 1px gray;
+	width: 54vw;
+	height: 500px;
+	padding-top: 30px;
+
+	vertical-align: 3px;
+	margin: 0 auto;
+	border: 1px solid #dbdbdb;
+	display: grid;
+}
+
+/* .log1 {
+	padding-bottom: 0px;
+	width: 70vw;
+	height: 6vh;
+	text-indent: 5px;
+	margin: 0 auto;
+	box-align: center;
+	box-sizing: border-box;
+	outline: 0px;
+}
+
+.log2 {
+	padding-top: -30000px;
+	padding-bottom: 0px;
+	width: 70vw;
+	height: 6vh;
+	text-indent: 5px;
+	margin: 0 auto;
+	box-align: center;
+	box-sizing: border-box;
+	outline: 0px;
+} */
+/* .log1,
+.log2 {
+	height: 50px;
+} */
+.id {
+	display: block;
+	width: 400px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	text-indent: 5px;
+	outline-color: gray;
+	margin-top: 10vh;
+}
+
+.pwd {
+	display: block;
+	width: 400px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	text-indent: 5px;
+	outline-color: gray;
+	margin-top: 0px;
+}
+.header {
+	grid-area: "1";
+	width: 100px;
+	margin: 0 auto;
+}
+
+.remain {
+	margin: 0 auto;
+	margin-top: 5vh;
+}
+
+.line_or {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 10px;
+	color: gray;
+}
+.brand_logo {
+	margin-top: 7vh;
+	margin-left: 9vw;
+	width: 100px;
+	margin: 10vh 45vw;
+}
+.loginbox {
+	width: 40vw;
+	grid-area: "a";
+	margin: 0 auto;
+}
+.button {
+	border-radius: 10px;
+	width: 20vw;
+	height: 1vw;
+	color: yellow;
+}
+.loginBtn {
+	border-color: white;
+	border-radius: 7px;
+	background-color: yellow;
+}
+
+.qrBtn {
+	border-color: white;
+	border-radius: 7px;
+}
+.footer {
+	grid-area: "b";
+}

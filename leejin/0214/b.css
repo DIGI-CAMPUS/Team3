@@ -1,0 +1,174 @@
+body {
+	width: 100%;
+	height: 200vh;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 20vh 80vh 10vh;
+	grid-template-areas:
+		"1  "
+		"a"
+		"b b2";
+}
+
+.loginbox {
+	border: 1px gray;
+	width: 400px;
+	height: 500px;
+	padding-top: 30px;
+	vertical-align: 3px;
+	margin: 0 auto;
+	margin-top: 0 px;
+	border: 1px solid #dbdbdb;
+
+	display: grid;
+}
+
+/* .log1 {
+	padding-bottom: 0px;
+	width: 70vw;
+	height: 6vh;
+	text-indent: 5px;
+	margin: 0 auto;
+	box-align: center;
+	box-sizing: border-box;
+	outline: 0px;
+}
+
+.log2 {
+	padding-top: -30000px;
+	padding-bottom: 0px;
+	width: 70vw;
+	height: 6vh;
+	text-indent: 5px;
+	margin: 0 auto;
+	box-align: center;
+	box-sizing: border-box;
+	outline: 0px;
+} */
+/* .log1,
+.log2 {
+	height: 50px;
+} */
+.id {
+	display: block;
+	width: 400px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+
+	border-radius: 3px;
+	text-indent: 5px;
+	outline-color: gray;
+	margin-top: 3vh;
+}
+
+.pwd {
+	display: block;
+	width: 400px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border-radius: 3px;
+	text-indent: 5px;
+	outline-color: gray;
+	margin-top: -30px;
+}
+.header {
+	grid-area: "1";
+	width: 100px;
+	margin: 0 auto;
+}
+
+.item_choice {
+	height: 3vh;
+	margin-left: 6vw;
+	margin-top: 0px;
+	margin-bottom: 0vh;
+}
+
+.line_or {
+	text-align: center;
+	font-size: 10px;
+	color: gray;
+}
+
+.brand_logo {
+	margin-top: 7vh;
+	margin-left: 9vw;
+	width: 100px;
+	margin: 10vh 45vw;
+}
+.loginbox {
+	width: 40vw;
+	grid-area: "a";
+	margin: 0 auto;
+}
+.button {
+	border-radius: 10px;
+	width: 20vw;
+	height: 1vw;
+	color: yellow;
+}
+a {
+	text-decoration-line: none;
+}
+
+.line_or {
+	height: 30px;
+}
+
+.btn_help {
+	background-color: white;
+	border: none;
+	margin: 0 auto;
+	outline: none;
+	box-shadow: none;
+}
+.loginBtn {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	border-radius: 7px;
+	width: 400px;
+	height: 45px;
+	margin: 0 auto;
+	margin-bottom: -5vh;
+	background-color: yellow;
+}
+
+.qrBtn {
+	border: none;
+	outline: none;
+	box-shadow: none;
+	width: 400px;
+	height: 45px;
+	margin: 0 auto;
+	margin-top: -7vh;
+	border-color: white;
+	border-radius: 7px;
+}
+
+.line_or {
+	margin: 0px;
+}
+footer {
+	margin-top: -3vh;
+	font-size: x-small;
+	text-align: center;
+	padding-right: 3vw;
+	grid-area: "b";
+}
+
+.join {
+	margin-left: 3.2vw;
+}
+
+.forgot {
+	margin-left: 17vw;
+}
+#label-staySignedIn {
+	color: gray;
+	font-size: 13px;
+}
