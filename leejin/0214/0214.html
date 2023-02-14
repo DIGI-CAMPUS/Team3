@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>window 객체의 속성</title>
+		<style>
+			/* 
+        웹 브라우저에 스크롤을 생ㅇ기게 하기 위해 body 태그에 너비 , 높이 추가  */
+			body {
+				width: 2500px;
+				height: 5000px;
+			}
+			button {
+				position: fixed;
+				left: 10px;
+				top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="printInfo()">window객체속성</button>
+		<script>
+			function printInfo() {
+				console.log(`웹 브라우저의 너비(innerwidth) : ${window.innerWidth}`);
+				console.log(`웹 브라우저의 높이(innerheight) : ${window.innerHeight}`);
+				console.log(
+					`웹 브라우저의 창의너비(outerwidth) : ${window.outerWidth}`
+				);
+				console.log(
+					`웹 브라우저의 창의높이(outerheight) : ${window.outerHeight}`
+				);
+				console.log(
+					`웹 브라우저의 창의 위쪽 면과 모니터 사이의 간격(screenTop,screenY) : ${window.screenTop}/${window.screenY}`
+				);
+				console.log(
+					`웹 브라우저의 창의 위쪽 면과 모니터 사이의 간격(screenleft,screenX) : ${window.screenleft}/${window.screenX}`
+				);
+				console.log(
+					`웹 브라우저의 창의 스크롤 가로 위치(scrollX) : ${window.scrollX}/${window.scrollX}`
+				);
+				console.log(
+					`웹 브라우저의 창의 위쪽 면과 모니터 사이의 간격(scrollY) : ${window.scrollY}/${window.scrollY}`
+				);
+			}
+		</script>
+	</body>
+</html>
