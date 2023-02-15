@@ -1,0 +1,55 @@
+body {
+	width: 100px;
+	height: 50px;
+	display: grid;
+	grid-template-columns: 20px 10px 80px 10px;
+	grid-template-rows: 10px 10px 10px 10px 10px;
+	grid-template-areas:
+		"A A A A  "
+		"B C D E"
+		"F F F F "
+		"G G G G"
+		"H H H H"
+		"I I I I";
+}
+header {
+	grid-area: "A";
+	background-color: aqua;
+	width: 120px;
+}
+
+.menu {
+	grid-area: "B";
+	width: 10px;
+	background-color: red;
+}
+
+.find {
+	grid-area: "D";
+	background-color: rgb(0, 255, 47);
+}
+
+.logo {
+	grid-area: "D";
+	background-color: rgb(52, 75, 75);
+}
+
+.loginand {
+	grid-area: "E";
+}
+
+.brandtext {
+	grid-area: "F";
+}
+
+.video {
+	grid-area: "G";
+}
+
+.gallery {
+	grid-area: "H";
+}
+
+.footer {
+	grid-area: "I";
+}
