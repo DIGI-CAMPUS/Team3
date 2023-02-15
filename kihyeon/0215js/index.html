@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red-color{
+            color : red;
+        }
+        .fs40{
+            font-size: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <p id = "text">text</p>
+
+    <script>
+        const pEl = document.querySelector("#text"); //노드선택
+        pEl.classList.add("red-color"); //class추가
+        pEl.classList.add("fs20");
+    </script> -->
+<!-- 
+    <a href="http://www.naver.com">NAVER</a>
+
+    <script>
+
+        const aEl = document.querySelector("a"); //노드 선택
+        const href = aEl.getAttribute("href")
+        aEl.setAttribute("href", "https://www.daum.net");
+        aEl.innerText = 'daum';
+        aEl.setAttribute("target","_blank"); //타겟 속성값을 블랭크로 지정. 새창으로 열기
+    </script> -->
+
+    <a href="http://www.naver.com" class = "fs40">NAVER</a>
+
+    <script>
+    const aEl = document.querySelector("a");
+        aEl.classList.add("red-color");
+        aEl.setAttribute("class", "red-color");
+    //aEl.removeAttribute("class");
+    </script>
+
+    <!-- <script>
+        const aEl = document.querySelector("a"); //노드 선택
+        const href = aEl.getAttribute("href")
+        aEl.setAttribute("data-link", '다음')
+        aEl.setAttribute("class", 'red-color')
+    </script> -->
+
+
+
+</body>
+</html>

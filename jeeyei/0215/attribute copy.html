@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attribute</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.naver.com" data-link="네이버">NAVER</a>
+
+    <script>
+      const aEl = document.querySelector("a"); //노드선택
+      const href = aEl.getAttribute("href");
+      aEl.setAttribute("data-link", "다음"); // f12눌러서 확인해보면 data-link의 값이 바뀐 것을 볼 수 있다
+      aEl.setAttribute("class", "red-color"); //class - red
+    </script>
+  </body>
+</html>
