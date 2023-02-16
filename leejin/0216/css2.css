@@ -1,0 +1,171 @@
+/* Box sizing and general styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	color: #333;
+	background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.logo {
+	font-size: 32px;
+	height: 20vh;
+	font-weight: bold;
+	color: #f44336;
+	text-transform: uppercase;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #333;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+	background-color: #f44336;
+	color: #fff;
+}
+
+.login {
+	display: flex;
+	align-items: center;
+}
+
+.login button {
+	background-color: #f44336;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 15px;
+	transition: all 0.3s ease;
+}
+
+.login button:hover {
+	background-color: #e53935;
+}
+
+/* Main content styles */
+main {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0px;
+}
+
+#home {
+	text-align: center;
+	margin-top: 8px;
+}
+
+#home h1 {
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+#home p {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 80px;
+}
+
+.gallery-row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.gallery img {
+	width: 23%;
+	margin-bottom: 20px;
+	object-fit: cover;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.gallery img:hover {
+	transform: scale(1.1);
+}
+
+#about {
+	text-align: center;
+	margin-top: 80px;
+}
+
+#about h2 {
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+#about p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+#contact {
+	text-align: center;
+	margin-top: 80px;
+}
+
+#contact h2 {
+	font-size: 36px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.question {
+	text-align: center;
+}
+
+#qanda {
+	text-align: center;
+	margin-top: 80px;
+}
