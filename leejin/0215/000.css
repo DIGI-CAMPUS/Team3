@@ -1,0 +1,77 @@
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+	grid-template-rows: 0.1fr 1fr 1.5fr 2fr 3fr 1fr;
+	grid-template-areas:
+		"header header header header"
+		"menu menu logo loginend"
+		"brandtext brandtext brandtext brandtext"
+		"video video video video"
+		"gallery gallery gallery gallery"
+		"footer footer footer footer";
+	font-family: "Times New Roman", Times, serif;
+	background-color: rgb(232, 231, 229);
+}
+
+#header {
+	grid-area: header;
+	height: 2vh;
+	background-color: aqua;
+	width: 100%;
+	line-height: 15%;
+}
+#header > h2 {
+	margin-top: 6vh;
+}
+.menu {
+	grid-area: menu;
+	height: 10vh;
+}
+
+.brandtext {
+	/* font-family: "flower"; */
+	font-family: "Times New Roman", Times, serif;
+	margin: 30px auto;
+	grid-area: brandtext;
+}
+
+.video {
+	display: flex;
+	margin-left: 5vw;
+	font-family: "Times New Roman", Times, serif;
+	grid-area: video;
+}
+
+h4 {
+	font-size: 30px;
+}
+
+hr {
+	size: 100%;
+}
+.box1 {
+	margin-top: 6vh;
+	width: 30vw;
+	border: none;
+	padding: 10px;
+	margin-left: 10vw;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.box2 {
+	margin-top: 6vh;
+	width: 30vw;
+	border: none;
+	padding: 10px;
+	margin-left: 3vw;
+}
+.gallery {
+	grid-area: gallery;
+	background-color: rgb(209, 174, 199);
+}
+
+footer {
+	grid-area: footer;
+	background-color: rgb(75, 15, 213);
+}
