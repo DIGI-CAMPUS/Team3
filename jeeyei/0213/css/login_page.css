@@ -147,13 +147,15 @@ nav {
 
 #login {
   width: 510px;
-  background-color: rgb(128, 194, 118);
+  background-color: rgb(202, 220, 199);
   border-color: transparent;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
 }
+
 
 input {
   box-sizing: border-box;
@@ -162,7 +164,7 @@ input {
 }
 
 input:focus {
-  border-color: #0982f0;
+  border-color: #3e7d4e;
   outline: none;
 }
 
