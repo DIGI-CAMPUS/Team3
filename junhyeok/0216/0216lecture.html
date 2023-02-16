@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     <button onclick = "clickEvent()">click</button>
+    <Script>
+        function clickEvent(){
+            alert("You clicked a button");
+        }
+    </Script> -->
+
+    <!-- focus를 하면 onfocus가 되고, focus하지않으면 blurEvent를 발생시켜주라는 것임 -->
+
+<!--     <form>
+        <input type = "text" onfocus = "focusEvent()" onblur = "blurEvent()">
+        
+    </form>
+    <script>
+        function focusEvent(){
+            console.log("focus on!");        
+        }
+        function blurEvent(){
+            console.log("focus out!");
+        }
+    </script> -->
+<!-- 
+    <button> click </button>
+    <script>
+        const btnEl = document.querySelector("button");
+            btnEl.onclick = function(){
+                alert("click!");
+            }
+            btnEl.onclick = () => {
+                alert("click!");
+            } 
+            btnEl.onclick = clickEvent;
+               function clickEvent(){
+                alert("click!");
+               }     
+     </script> -->
+    <!-- <button> click</button>
+    <input type = "text"></input> -->
+        <!-- // const btnEl =document.querySelector("button");
+        // btnEl.addEventListener("click", function(){
+        //     btnEl.addEventListener("click", clickEvent);
+        //   <노드>.addEventListener("이벤트 타입", 이벤트함수);
+        //     alert("button clicked!");
+        // })
+
+        // const clickEvent = () => {
+        //     alert("button clicked!");
+        // }
+        // btnEl.addEventListener("click", clickEvent);
+
+        //사람들은 어디를 가장 많이 누르는가?
+        // btnEl.addEventListener("click", function(){
+        //     console.log(event);
+        //     console.log(`clientX:${event.clientX}`);
+        //     console.log(`clientY:${event.clientY}`);
+        //     console.log(`pageX:${event.pageX}`);
+        //     console.log(`pageY:${event.pageY}`);
+        //     console.log(`screenX:${event.screenX}`);
+        //     console.log(`screenY:${event.screenY}`);
+        // }
+        // const inputEl = document.querySelector("input");
+        // btnEl.addEventListener("keydown", function(event)){
+        //     console.log(event);
+        //     console.log(`keyCode:${event.keyCode}`);
+        //     console.log(`ctrlKey:${event.ctrlKey}`);
+        //     console.log(`altKey:${event.altKey}`);
+        //     console.log(`shiftKey:${event.shiftKey}`);
+        // } -->
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+
+    <script>
+        const pEl = document.querySelectorAll("p");
+        pEl.forEach((el) => {
+            el.addEventListener("click", function(){
+                console.log(this);
+                if(this.style.color === "red"){
+                    this.style.color = "black";
+                }else{
+                    this.style.color = "red";
+                }
+            })
+        })
+    </script>
+</body>
+</html>
