@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src = "js/jquery.js"></script>
+
+    <script>
+        // $(function(){
+        //     $("#meun li:first")
+        //     .css({"background-color": "#ff0"});
+
+        //     $("#meun li:last")
+        //     .css({"background-color": "#0ff"});
+        // })
+
+        // $(function(){
+        //     $("#meun li:even")//홀수 인덱스
+        //     .css({"background-color": "#ff0"});
+
+        //     $("#meun li:odd")//짝수 인덱스
+        //     .css({"background-color": "#0ff"});
+        // })
+
+        // $(function(){
+        //     $("#meun li").eq(2)//인덱스2 eq는 equal
+        //     .css({"background-color": "#ff0"});
+
+        //     $("#meun li:lt(2)")//인덱스 2보다 큰 인덱스를 제외하고 less than
+        //     .css({"background-color": "#0f0"});
+
+        //     $("#meun li:gt(2)")//인덱스 2보다 작은 인덱스를 제외하고 greater than
+        //     .css({"background-color": "#0ff"});
+        // })
+
+
+        $(function(){
+            $("#meun1 li:nth-child(1)")
+            .css({"background-color": "#ff0"});
+
+            $("#meun1 li:nth-child(3n)")
+            .css({"background-color": "#f00"});
+            
+            $("#meun2 li:nth-last-child(1)")
+            .css({"background-color": "#0f0"});
+
+        })
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id = "meun1">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul id = "meun1">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <ul id = "meun2">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+
+    <!-- <ul id ="meun">
+        <h2>dd</h2>
+        <h2>dd</h2>
+        <h2>dd</h2>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+        <li>내용5</li>
+    </ul> -->
+
+
+</body>
+</html>
