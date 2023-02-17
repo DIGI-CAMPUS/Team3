@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<header>
-			<img class ="brand_logo" src="kakao.png" alt="logo" ></img>
+			<img class ="brand_logo" src="image/kakao.png" alt="logo" ></img>
  
 			
 		</header>
@@ -24,7 +24,7 @@
 			<div class="item_choice"><input type="checkbox" id="staySignedIn--3" class="inp_choice" name="staySignedIn" value="false">
 				<label class="lab_choice"  for="staySignedIn--3" id="label-staySignedIn"><span class="ico_comm ico_check"></span>
 					로그인 상태 유지</label><button type="button" background-color="white" class="btn_help" aria-haspopup="true" 
-					aria-describedby="label-staySignedIn"><img src="i.png"  width="20px"  alt="information" ></button>
+					aria-describedby="label-staySignedIn"><img src="image/i.png"  width="20px"  alt="information" ></button>
 				</div>
 			<button class = "loginBtn" button onclick="login()"><a href ="#">로그인</a></button>   
             <span class="line_or"><span class="txt_or">또는</span></span>
@@ -53,13 +53,27 @@
                 // console.log(idBox)
                 // console.log(pwBox)
 
+				let checkedBox = document.querySelector(".inp_choice")
+				// console.log(checkedBox.checked);
+
                 if ( idBox === "digi" && pwBox === "1004"){
                     alert("로그인 성공")
-                    location.reload()
+						//로그인 성공 시 정해둔 페이지로 연결
+                    location.href = "https://www.daum.net";
                 } else {alert("로그인 실패")
-                location.reload()
+				
+                // location.reload()
+				//로그인 실패 시 '로그인 상태 유지'룰 c체크했다면 입력한 비밀번호만 지우고,
+				if (checkedBox.checked === true) {
+					pw_control.value = ''
+				} else {
+					//체크를 안했다면 아이디 비밀번호 모두 초기화!
+					id_control.value =''
+					pw_control.value =''
+				}
+				}
 }
-            }
+    
 
 
 

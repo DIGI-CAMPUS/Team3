@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login - My Website</title>
+		<link rel="stylesheet" href="genie.css" />
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<a href="chatmade.html">
+					<img src="logo.png" alt="My Website" />
+				</a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="faq.html">Q&amp;A</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1>Login</h1>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required />
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required />
+				<button type="submit">Login</button>
+			</form>
+		</main>
+		<footer>
+			<p>&copy; 2023 My Website</p>
+		</footer>
+		<script>
+			// Get the login form element
+			const loginForm = document.querySelector("#login-form");
+
+			// Add a submit event listener to the form
+			loginForm.addEventListener("submit", (event) => {
+				// Prevent the default form submission behavior
+				event.preventDefault();
+
+				// Get the username and password input elements
+				const usernameInput = loginForm.querySelector('input[name="username"]');
+				const passwordInput = loginForm.querySelector('input[name="password"]');
+
+				// Get the entered username and password values
+				const enteredUsername = usernameInput.value;
+				const enteredPassword = passwordInput.value;
+
+				// Check if the entered username and password match the correct values
+				if (enteredUsername === "jinlee" && enteredPassword === "1004") {
+					alert("Success");
+				} else {
+					alert("Failed");
+				}
+
+				// Reset the form fields
+				loginForm.reset();
+			});
+		</script>
+	</body>
+</html>
