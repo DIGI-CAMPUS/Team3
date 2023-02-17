@@ -2,16 +2,16 @@
 	width: 100vw;
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
-	grid-template-rows: 0.1fr 1fr 1.5fr 2fr 3fr 1fr;
+	grid-template-columns: 0.3fr 1fr;
+	grid-template-rows: 0.1fr 1fr;
 	grid-template-areas:
-		"header header header header"
-		"menu menu logo loginend"
-		"brandtext brandtext brandtext brandtext"
-		"video video video video"
-		"gallery gallery gallery gallery"
-		"footer footer footer footer";
-	font-family: "Times New Roman", Times, serif;
+		"header header "
+		"logo menu "
+		"brandtext brandtext "
+		"video video"
+		"gallery gallery "
+		"footer footer ";
+
 	background-color: rgb(232, 231, 229);
 }
 
@@ -30,6 +30,16 @@
 	height: 10vh;
 }
 
+menu .head-menu-top-nav {
+	position: absolute;
+	left: 552px;
+	top: 21px;
+}
+
+.logo {
+	grid-area: logo;
+}
+
 .brandtext {
 	/* font-family: "flower"; */
 	font-family: "Times New Roman", Times, serif;
@@ -44,20 +54,13 @@
 	grid-area: video;
 }
 
-h4 {
-	font-size: 30px;
-}
-
-hr {
-	size: 100%;
-}
 .box1 {
 	margin-top: 6vh;
 	width: 30vw;
 	border: none;
 	padding: 10px;
 	margin-left: 10vw;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: "Times New Roman", Times, serif;
 }
 .box2 {
 	margin-top: 6vh;

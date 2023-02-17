@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>property listner</title>
+</head>
+<body>
+    <button> 클릭 </button>
+    
+    <script>
+        const btnEl = document.querySelector("button");
+        
+        btnEl.onclick = function(){
+            alert("click");
+        }
+
+        // 이 방법이 제일 보편적임
+        /*  btnEl.onclick = () => {
+            alert("click");
+        } */
+
+
+        /*  btnEl.onclick = clickEvent;
+            function clickEvent(){
+                alert("click");
+            }
+        } */
+    </script>
+</body>
+</html>
