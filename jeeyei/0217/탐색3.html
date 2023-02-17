@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="jquery.js"></script>
+		<script>
+
+            $(function(){
+                $("#meun li").eq(2) //인덱스 2
+                .css({"background-color" : "#ff0"});
+                
+                $("#meun li:lt(2)") // 인덱스 2보다 작은 인덱스(less than)
+                .css({"background-color" : "#0f0"});
+                
+                $("#meun li:gt(2)") // 인덱스 2보다 큰 인덱스(greater)
+                .css({"background-color" : "#f0f"});
+            });
+
+		</script>
+	</head>
+	<body>
+        <ul id = "meun">
+            <h2>example</h2>
+            <h2>example</h2>
+            <h2>example</h2>
+            <li>짝수(0)</li>
+            <li>홀수(1)</li>
+            <li>짝수(2)</li>
+            <li>홀수(3)</li>
+        </ul>
+
+
+	</body>
+</html>

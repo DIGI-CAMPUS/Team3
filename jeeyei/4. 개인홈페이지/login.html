@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogIn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div id="container">
+    <button id="openLogin">◀</button>
+    <div id="logBox">
+      <div id="box"></div>
+      <div id="login">
+        <div id="logArea">
+          <h5>Please Login</h5>
+          <input type="text" id="idInput" placeholder="   Users_Id">
+          <input type="password" id="pwInput" placeholder="   Password">
+          <p id="forgot"><a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgot Password?</a></p>
+          <button type="button" id="logInBtn">LogIn</button>
+          <p id="signup">Not a member? <a href="https://www.instagram.com/accounts/emailsignup/"><span>sign up</span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+// 슬라이드 속성 만들기
+    let logControl = document.getElementById("openLogin");
+    let logBoxControl = document.getElementById("logBox");
+    let BoxTrans = false;
+
+    logControl.addEventListener('click',transX)
+    function transX(){
+      if (!BoxTrans) {
+        logBoxControl.animate(
+        {transform: 'translateX(-50vw)'},
+        {duration: 1000, // 밀리초 지정
+          fill: 'forwards', // 종료 시 속성을 지님
+          easing: 'ease' // 가속도 종류
+        });
+        BoxTrans = true;
+        logControl.innerText = "▶"
+      } else {
+        logBoxControl.animate(
+        {transform: 'translateX(0vw)'},
+        {duration: 1000, // 밀리초 지정
+          fill: 'forwards', // 종료 시 속성을 지님
+          easing: 'ease' // 가속도 종류
+        });
+        BoxTrans = false
+        logControl.innerText = "◀"
+        logInBtn
+      }
+    }
+
+
+// 로그인 관련 함수 만들기
+    let idVal = document.querySelector('#idInput')
+    let pwVal = document.querySelector('#pwInput')
+    let logBtn = document.querySelector('#logInBtn')
+
+    console.log(idVal)
+    console.log(pwVal)
+    console.log(logBtn)
+
+    logBtn.addEventListener('click', confirmLogin)
+    idVal.addEventListener('change',btnAble)
+    pwVal.addEventListener('change',btnAble)
+
+
+    function confirmLogin(){
+      if (idVal.value !== 'Yeons2013') {
+        alert('존재하지 않는 계정입니다.');
+        idVal.value = ""
+        pwVal.value = "";}
+      else {
+        if (pwVal.value === '1234') {
+          alert('로그인에 성공했습니다.')
+          location.href = "https://about.meta.com/"
+        } else {
+          alert('비밀번호를 다시 입력해주세요.')
+          pwVal.value = "";
+        }
+      }
+    } 
+
+    function btnAble(){
+      console.log(idVal.value)
+      console.log(pwVal.value)
+
+      if (idVal.value && pwVal.value){
+        logBtn.style.backgroundColor = "blue"
+      } else {
+      logBtn.style.backgroundColor = "black"
+    }}
+
+  </script>
+</body>
+</html>

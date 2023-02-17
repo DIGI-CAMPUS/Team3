@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/main_page.css" />
+    <style>
+      .goLeft {
+        transform: translate(-2000px, 0px);
+      }
+      .goRight {
+        transform: translate(0px, 0px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loginBackGround">
+      <div class="loginSection">
+        <div class="loginSectionLeft">
+          <button class="moveLeftBtn" onclick="moveLeft()">move</button>
+        </div>
+        <div class="loginSectionRight">
+          <button class="moveRightBtn" onclick="moveRight()">move</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function moveLeft() {
+        document.querySelector(".loginSection").classList.add("goLeft");
+      }
+
+      function moveRight() {
+        document.querySelector(".loginSection").classList.add("goRight");
+      }
+    </script>
+  </body>
+</html>

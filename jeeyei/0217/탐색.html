@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="jquery.js"></script>
+		<script>
+
+            $(function(){
+                $("#meun li:first")
+                .css({"background-color" : "#ff0"});
+                
+                $("#meun li:last")
+                .css({"background-color" : "#0ff"});
+                
+                $("#meun h2:last")
+                .css({"background-color" : "#0ff"});
+            });
+
+		</script>
+	</head>
+	<body>
+        <ul id = "meun">
+            <h2>example</h2>
+            <h2>example</h2>
+            <h2>example</h2>
+            <li>sample1</li>
+            <li>sample2</li>
+            <li>sample3</li>
+            <li>sample4</li>
+        </ul>
+
+
+	</body>
+</html>
