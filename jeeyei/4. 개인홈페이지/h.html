@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main_page2.css" />
+</head>
+<body>
+
+<div class="pagination">
+	<button id="prevPage">Prev</button>
+	<span id="currentPage"></span>
+	<button id="nextPage">Next</button>
+</div>
+<script>
+
+    
+const tableRows = document.querySelectorAll('.table tbody tr');
+const rowsPerPage = 5;
+let currentPage = 1;
+function showRows() {
+	for (let i = 0; i < tableRows.length; i++) {
+		if (i < (currentPage - 1) * rowsPerPage || i >= currentPage * rowsPerPage) {
+			tableRows[i].style.display = 'none';
+		} else {
+			tableRows[i].style.display = '';
+		}
+	}
+	document.getElementById('currentPage').innerHTML = currentPage;
+}
+showRows();
+document.getElementById('prevPage').addEventListener('click', function() {
+	if (currentPage > 1) {
+		currentPage--;
+		showRows();
+	}
+});
+document.getElementById('nextPage').addEventListener('click', function() {
+	if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
+		currentPage++;
+		showRows();
+	}
+});
+</script>
+    
+</body>
+</html>
