@@ -1,0 +1,372 @@
+
+/* 전체 구성 */
+
+html, body{
+    height : 100%;
+}
+
+.container{      /* 초반에 이렇게 container를 지정해서 픽셀을 지정해주는 게 좋음 */
+    display : flex;    /* display:flex값은 container 아래에 있는 class 뭉탱이들을 가로정렬하려고 하는 것임. */
+    justify-content: flex-start;
+    height : 700px;
+    width : 1200px;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+/* 헤더부분 */
+.header{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    height : 100%;
+    width : 20%;
+    border-right : solid;
+    border-color : black;
+    background-color: white;
+    }
+
+/* 섹션부분 */
+.section{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    height : 100%;
+    width : 60%;
+    display : flex;
+    }
+/* 푸터부분 */
+.footer{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+    height : 100%;
+    width : 20%;
+    background-color: white;
+    }
+
+/* =============================================================================================================== */
+
+/* 헤더부분-세부사항 */
+ .header1{
+    box-sizing : border-box;
+    /* position : relative; */ 
+    height : 80%;
+    margin-left : 10px;
+    margin-bottom : 60px;
+    /*     border-radius: 70%;
+    border-color : pink; */
+    
+}
+
+header > .class{
+    margin-top : 20px;
+   /*  position : absolute; */
+}
+
+.header1 >div{
+    margin-bottom : 10px; 
+    border-radius: 70%;
+    font-size : 15px;
+    font : 'Open sans';
+}
+.more{
+    font-size : 15px;
+    margin-left : 10px;
+}
+
+#icon1:hover{
+    transition : all 0.1s linear;
+}
+
+#icon1:hover{
+    transform : scale(2);
+    border-radius : 20%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* 섹션부분-세부사항 */
+.voids{
+    box-sizing: border-box;
+    margin: 0;
+    padding : 0;
+    height : 100%;
+    width : 40%;
+    background-color : white;
+}
+.mains{
+    box-sizing: border-box;
+    height : 100%;
+    width : 60%;
+    border-left-width : 1px;
+
+}
+.story{
+    box-sizing : border-box;
+    margin : 10px;
+    padding : 10px 10px 10px 10px;
+    height : 15%;
+    border : solid;
+    border-width : 1px;
+    border-radius : 10px;
+    background-color : white;
+    display : flex;
+    justify-content: space-between;
+    font-size : 12px;
+}
+
+#storypic{
+    display: table; margin-left: auto; margin-right: auto;
+    border-radius : 70%;
+    border : solid;
+    border-color : #E1306C;
+}
+
+.posts{
+    box-sizing : border-box;
+    height : 85%;
+    background-color : white;
+    margin : 10px;
+    padding : 10px 10px 10px 10px;
+    border : solid;
+    border-width : 1px;
+    border-radius : 10px;
+    display : block;
+}
+.postsbar{
+    display : flex;
+    font-size : 20px;
+    margin-bottom : 5px;
+}
+#id{
+    margin-left: 20px;
+    font-size : 14px;
+}
+#postmore{
+    margin-left : 202px;
+}
+.reaction{
+    display : flex;
+}
+#comment{
+    margin-left : 20px;
+}
+#paperplane{
+    margin-left : 20px;
+}
+#bookmark{
+    margin-left : 245px;
+    font-size : 15px;
+}
+.commentbar{
+    display : flex;
+}
+#commentbox{
+    margin-left : 10px;
+    overflow : hidden;
+}
+#fun{
+    font-size : 15px;
+}
+.footer{
+    margin-left : 15px;
+}
+.profile1{
+
+    font-size: 18px;
+    margin-bottom : 30px;
+}
+.profile1 > div{
+    display : inline-block;
+}
+#nameofyou{
+    font-size : 12px;
+}
+#fid{
+    display : float;
+}
+.recom{
+    
+}
+#recomforyou{
+    font-size : 14px;
+    color : grey;
+}
+#seeall{
+    font-size : 14px;
+    color : blue;
+    margin-left : 20px;
+}
+
+.recom1{
+    display : flex;
+    margin-bottom : 5px;
+}
+
+#footprofile{
+    border-radius : 70%;
+    border : solid;
+    border-width : 1px;
+}
+#footid{
+    font-size : 12px;
+    margin-bottom : 5px;
+    margin-left : 10px;
+}
+#follow{
+    margin-left : 20px;
+}
+.introduction{
+    font-size : 12px;
+    color : grey;
+}
+
+
+
+
+
+/* 스토리에 마우스를 가져다 놓으면 숨겨진 사진이 나오는 효과 */
+#storypicbox{   /* 1. 항상 내가 숨기고 싶은 컨텐츠의 모계좌를 포지션정해줘! */
+    position : relative;
+}
+#hiddenstory{   /* 2. 그 후 내가 숨기고 싶은 컨텐츠를 숨겨줘 */
+    position : absolute;
+    display : none;
+}
+#storypicbox:hover > #hiddenstory{ 
+    /* 마지막으로 마우스를 대면 보일 수 있도록 해주고, 여기서 사진 크기를 조절해줌 */
+    display : block;
+    width : 450px;
+    height : 720px;
+    border-radius : 5%;
+   
+}
+
+/* 스토리에 올리면 스토리 프로필 사진이 커지는 효과 */
+
+#footprofile:hover{ 
+    /* 객체에 hover값을 정해주면 마우슬 대면 뒤에 뭔가를 실행하라는 뜻이다. */
+    transition : all 0.1s linear;
+}
+
+#footprofile:hover{
+    transform : scale(3);
+    border-radius : 20%;
+}
+
+
+#realphoto1:hover{
+/* 얼마나 천천히 반응을 할 건지에 관한 코드 */
+    transition : all 0.3s linear;
+}
+
+#realphoto1:hover{
+/* hover(마우스오버)했을 때 어떻게 키울지에 대한 코드 */
+    transform : scale(1.6);
+    border-radius : 20%;
+}
+
+#storypic:hover{
+    transition : all 0.3s linear;
+}
+
+
+
+
+#box{
+    width:30px;height:30px;background: #pink ;margin: 40px auto ; border-radius:50%;
+    /*처음 보여질 box의 모양과 색상을 잡아줍니다.*/
+    animation:circle 2s 1s infinite alternate;
+    font-size : 10px;
+    color : white;
+    text-align : center;
+}    
+#diversity{
+    text-align : center;
+}
+
+    
+    
+    
+.login-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-box label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .login-box input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  }
+  
+  .login-box button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0095f6;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-box button:hover {
+    background-color: #0084d4;
+  }
+  .message {
+    margin-top: 20px;
+    color: red;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* 미디어쿼리 */
+@media screen {(max-width : 600px)
+.container{width:10%;}
+}
+
+@keyframes ball {
+    0% {
+      top:0px;
+    }
+    95% {
+      width: 100px;
+    }
+    to {
+      top:600px;
+      width:115px;
+      height:90px
+    } 
+  }
+
+  @keyframes circle {/* circle이라는 애니메이션 키프래임 만들기*/
+    0%  {border-radius:20% 30% 20% 0;width:50px;height:50px;background: #fa7e1e;}
+    30% {border-radius:0 30% 40% 30%;width:100px;height:100px; background: #FFDC80 ;}
+    60% {border-radius:40% 0 40% 50% ;width:150px;height:150px;background: pink; }
+    100% {border-radius:50% 50% 0 50%;background: #962fbf;width:150px;height:150px;}
+}
+
+
