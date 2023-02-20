@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>list관련속성2</title>
+        <link rel="stylesheet" href="게시판.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1>LOGO</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#general-forum">General forum</a></li>
+                    <li><a href="#qanda">Q&A</a></li>
+                </ul>
+                <div class="login">
+                    <button class ="login button" ><a href="login.html">Login</a></button>
+                </div>
+            </nav>
+        </header>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="Search..." />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="ask-button">
+            <button>Ask a question</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">몬스터주식회사</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">몬스터대학교</a></td>
+                    <td>픽사</td>
+                    <td>202</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">토이스토리</a></td>
+                    <td>버즈</td>
+                    <td>111</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevPage">Prev</button>
+            <span id="currentPage"></span>
+            <button id="nextPage">Next</button>
+        </div>
+    </body>
+
+    
+    <script>
+        const tableRows = document.querySelectorAll('.table tbody tr');
+        const rowsPerPage = 5;
+        let currentPage = 1;
+        function showRows() {
+            for (let i = 0; i < tableRows.length; i++) {
+                if (i < (currentPage - 1) * rowsPerPage || i >= currentPage * rowsPerPage) {
+                    tableRows[i].style.display = 'none';
+                } else {
+                    tableRows[i].style.display = '';
+                }
+            }
+            document.getElementById('currentPage').innerHTML = currentPage;
+        }
+        showRows();
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                showRows();
+            }
+        });
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
+                currentPage++;
+                showRows();
+            }
+        });
+
+
+    </script>
+</html>
