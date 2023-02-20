@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/main_page2.css" />
+
+  </head>
+  <body>
+    <div id="container">
+      <button id="openLogin">◀</button>
+      <div id="logBox">
+        <div id = "box"></div>
+        <div id="login">
+          <div id="logArea">
+            <h5> Login </h5>
+            <input type="text" id="idInput" placeholder="     ID" class="account">
+            <input type="password" id="pwInput" placeholder="     PASSWORD" class="account">
+            <div class="loginElements">
+                <p> <input style='zoom:0.3; margin:25px; width: 100px' type="checkbox" id = "saveCh" checked />  Remember me </p>
+                <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgot Password?</a>
+            </div>
+          
+            <button type="button" id="logInBtn">LogIn</button>
+            <p id="signup">Not a member? <a href="https://www.instagram.com/accounts/emailsignup/"><span>sign up</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <script>
+    let logControl = document.getElementById("openLogin");
+    let logBoxControl = document.getElementById("logBox");
+    let BoxTrans = false;
+
+    logControl.addEventListener('click',transX)
+    function transX(){
+      if (!BoxTrans) {
+        logBoxControl.animate(
+        {transform: 'translateX(-50vw)'},
+        {duration: 1000, // 밀리초 지정
+          fill: 'forwards', // 종료 시 속성을 지님
+          easing: 'ease' // 가속도 종류
+        });
+        BoxTrans = true;
+        logControl.innerText = "▶"
+      } else {
+        logBoxControl.animate(
+        {transform: 'translateX(0vw)'},
+        {duration: 1000, // 밀리초 지정
+          fill: 'forwards', // 종료 시 속성을 지님
+          easing: 'ease' // 가속도 종류
+        });
+        BoxTrans = false
+        logControl.innerText = "◀"
+        logInBtn
+      }
+    }
+
+    const id = document.getElementById("idInput");
+// getElementById 대신 querySelector 사용 가능
+const password = document.getElementById("pwInput");
+const login = document.getElementById("logInBtn");
+const saveChecked = document.getElementById("saveCh")
+let errorStack = 0;
+
+
+login.addEventListener("click", () => {
+  if (id.value == "testid") {
+    if (password.value == "1234") {
+      alert("로그인 되었습니다.");
+      window.location.href = "main_page3.html"; // 새로운 페이지 주소 넣기
+    } else {
+      alert("비밀번호가 틀렸습니다. 다시 한 번 확인해주세요.");
+      // 로그인에 실패했을 때 '아이디 저장' 체크 여부를 확인 후 True면 비밀번호만 초기화
+      if (saveChecked.checked === true){
+        password.value=''
+      } else{
+        //false면 아이디 비밀번호 모두 초기화
+        password.value = '';
+        id.value = '';
+        errorStack++;
+      }}
+
+  } else {
+    alert("존재하지 않는 계정입니다. ID를 확인하여 주세요.");
+  }
+
+  if (errorStack >= 5) {
+    alert("비밀번호를 5회 이상 틀리셨습니다.");
+  }
+});
+
+
+
+id.addEventListener("keyup", validate);
+password.addEventListener("keyup", validate);
+
+function validate() {
+
+  if(!(id.value && password.value)){
+    logInBtn.style.cssText = "background-color: rgb(202, 220, 199)";
+  } else {
+    logInBtn.style.cssText = "cursor: pointer";
+    logInBtn.style.cssText = "background-color: rgb(96, 149, 87)";
+  }
+}
+
+
+
+  </script>
+
+  </body>
+</html>

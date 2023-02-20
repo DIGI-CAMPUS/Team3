@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">  
+    <div class="header">
+        <div class ="header1">
+            <div><span><img src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" style="width:120px; height : 70px"></span></div>
+            <div><img src=image/home.png id="icon1"style="width:30px; height: 30px">&nbsp;&nbsp;홈</div>
+            <div><img src=image/glasses.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;검색</div>
+            <div><img src=image/compass.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;탐색 탭</div>
+            <div><img src=image/video.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;릴스</div>
+            <div><img src=image/paperplane.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;메세지</div>
+            <div><img src=image/heart.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;알림</div>
+            <div><img src=image/upload.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;만들기</div>
+            <div><img src=image/profile.png id="icon1"style="width:30px; height : 30px">&nbsp;&nbsp;프로필</div>    
+        </div>
+        <div class="more">
+            <img src=image/more.png id="icon1" style="width:30px; height : 30px">&nbsp;&nbsp;더보기
+        </div>
+    </div>
+    <div class= "section">
+        <div class="voids">
+        <!--   <div id="balls"></div> -->
+        <div id="box"></div>
+        <div id="diversity"> Diversity <br> in INSTAGRAM </div>        
+        <div class="login-box">
+            <form>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <button type="button"onclick='login()'>Log in</button>
+            </form>
+            <form>
+                <h5>ID = "curry" <br>PW = "legend".</h5>
+                <h6>원래는 로그인 되어야하지만<br> 과제 제출용이므로 입력하면 넘어감 <br> 위 id와 pw를 입력하세요.</h6>
+
+            </form>
+        </div>
+        </div>
+        <div class="mains">
+            <div class="story">
+                <div id="storypicbox"> <img src=image/tombrady.png id="storypic" style="width:40px; height : 40px"><img src=image/tombradystory.jpg id="hiddenstory"><br> tombrady </div>
+                <div id="storypicbox"> <img src=image/whitehouse.png id="storypic" style="width:40px; height : 40px"><img src=image/trump.gif id="hiddenstory"><br> whitehouse </div>
+                <div id="storypicbox"> <img src=image/billgates.png id="storypic" style="width:40px; height : 40px"><img src=image/billgates1.gif id="hiddenstory"><br> billgates </div>
+                <div id="storypicbox"> <img src=image/lebron.png id="storypic" style="width:40px; height : 40px"><img src=image/lebron1.gif id="hiddenstory"><br> kingjames </div>
+                <div id="storypicbox"> <img src=image/harden.jpg id="storypic" style="width:40px; height : 40px"><img src=image/meme.gif id="hiddenstory"><br> jamesharden </div>
+            </div>
+            <div class="posts">               
+                <div class="postsbar"> 
+                    <img src=image/curry.jpg id="footprofile" style="width:40px; height : 40px">
+                    <a id="id"> stephencurry30 
+                    <br>서울, 성수동
+                    </a>
+                    <img id="postmore" src="image/more.png" style="width:20px; height:20px">
+                </div>
+                <div class="realphoto"> 
+                    <img src=image/mydog.jpg id="realphoto1"style="width:385px; height:385px">
+                </div>
+                <div class="reaction">
+                    <img src=image/heart.png style="width:25px; height:25px>;">
+                    <img id="comment" src=image/comment.png style="width:25px; height:25px>">
+                    <img id="paperplane" src=image/paperplane.png style="width:25px; height:25px>">
+                    <img id="bookmark" src=image/bookmark.jpg style="width:25px; height:25px>">
+                </div>
+                <div class="postsumamry">
+                    <div id="fun">1 Likes</div>
+                </div>
+                <div class="commentbar">
+                    <img src=image/smile.png style="width:30px; height:30px">
+                    <textarea rows="1.5" cols="30" id="commentbox" autocomplete="off"> 댓글입력
+                    </textarea>
+                    <img id="paperplane" src=image/paperplane.png style="width:30px; height:0px>">
+                </div>
+                <a id="fun">badwooin99  누굴닮았는지 못생겼어요....</a>
+            </div>
+        </div>  
+    </div>
+    <div class="footer">
+        <div class="profile">
+            <br>
+            <div class="profile1">
+                <div> <img src=image/curry.jpg id="footprofile" style="width:40px; height : 40px"></div>
+                <div> <a id="fid"> <span>stephencurry30 </span><br> <a id="nameofyou">Wardell Curry </a> </a></div>
+
+            </div>
+            <div class="recom">
+                <a id="recomforyou"> 회원님을 위한 추천</a> <span id="seeall"> 모두보기</span>
+                <br>
+                <br>            
+                <div class="recom1"> <img src=image/gildong.png id="footprofile"style="width:40px; height : 40px"><a id="footid"> gildong1ove </a> <img src=image/follow.png id="follow" style="width:15px; height:15px;"></div>
+                <div class="recom1"> <img src=image/dog1.png id="footprofile"style="width:40px; height : 40px"><a id="footid"> redbean_lov </a> <img src=image/follow.png id="follow" style="width:15px; height:15px;"></div>
+                <div class="recom1"> <img src=image/sohee.jpg id="footprofile"style="width:40px; height : 40px"><a id="footid"> nose_mouse </a> <img src=image/follow.png id="follow" style="width:15px; height:15px;"></div>
+                <div class="recom1"> <img src=image/stone.jpg id="footprofile"style="width:40px; height : 40px"><a id="footid"> emmastone </a> <img src=image/follow.png id="follow" style="width:15px; height:15px;"></div>
+            </div>
+            <div class="introduction">
+                <a>소개 도움말 홍보센터 API 채용정보 <br>개인정보처리방침 약관 위치 언어</a>
+                <br><br>
+                <a> © 2023 INSTAGRAM FROM META</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function login() {
+        // Retrieve the username and password from the input fields
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "curry" && password === "legend") {
+            // If the login is successful, redirect to the home page\
+            alert ("원래대로 라면, 로그인이 되어야하겠지만, 과제 특성상 로그인 페이지로 넘어가야하므로 넘어가보겠습니다!")
+            location.href = 'Login.html';
+            return true;
+        } else {
+            // If the login is unsuccessful, display an error message
+            alert ("오류입니다. 의도한대로 ID에는 curry 비밀번호에는 legend라고 입력해주세요")
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

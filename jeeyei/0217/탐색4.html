@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="jquery.js"></script>
+		<script>
+
+            $(function(){
+                $("#meun1 li:nth-child(1)") //인덱스 아님, 걍 순서
+                .css({"background-color" : "#ff0"});
+                
+                $("#meun1 li:nth-child(3n)") // 3의 배수, 만약 2n 으로 하면 번갈아서 나타남
+                .css({"background-color" : "#0f0"});
+                
+                $("#meun2 li:nth-last-child(1)") //제일 마지막에서 첫번째
+                .css({"background-color" : "#f0f"});
+            });
+
+		</script>
+	</head>
+	<body>
+        <ul id = "meun1">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+            <li>내용5</li>
+            <li>내용6</li>
+            <li>내용7</li>
+        </ul>
+
+        <ul id = "meun2">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+
+
+	</body>
+</html>

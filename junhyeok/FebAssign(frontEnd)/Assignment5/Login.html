@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Box</title>
+	<style>
+		body {
+			background-color: #f6f6f6;
+		}
+		.container {
+			margin: auto;
+			margin-top: 100px;
+			width: 400px;
+			height: 400px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		input[type="text"], input[type="password"] {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+		}
+
+		input[type="button"] {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			width: 100%;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+
+		.message {
+			margin-top: 20px;
+			color: red;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="logo">
+		
+	</div> 
+	<div class="container">
+		<h1> <img src="https://1000logos.net/wp-content/uploads/2017/02/Logo-Instagram.png" style = "width: 240px; height: 70px;"> </h1>
+		<h5>실험용이니 ID = curry PW = legend을 넣어주세요.</h5>
+		<form >
+			<label for="username">아이디</label>
+			<input type="text" id="username" name="username" required>
+			<label for="password">비밀번호</label>
+			<input type="password" id="password" name="password" required>
+			<input type="button" onclick="return login()" value="Login">
+			<div class="message" id="message"></div>
+		</form>
+	</div>
+
+	<script>
+		function login() {
+			// Retrieve the username and password from the input fields
+			const username = document.getElementById("username").value;
+			const password = document.getElementById("password").value;
+
+			// Check if the username and password are correct
+			if (username === "curry" && password === "legend") {
+				// If the login is successful, redirect to the home page\
+				alert ("로그인에 성공하셨습니다!")
+				alert ("과제 특성에 맞게 원래페이지로 돌아가보겠습니다.")
+				location.href = "main.html";
+				return true;
+			} else {
+				// If the login is unsuccessful, display an error message
+				document.getElementById("message").innerHTML = "Invalid username or password";
+				return false;
+			}
+		}
+	</script>
+
+</body>
+</html>
