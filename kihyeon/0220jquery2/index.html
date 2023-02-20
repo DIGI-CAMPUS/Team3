@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "js/jquery.js"></script>
+    <script>
+        // $(function(){ //단독이벤트 등록
+        //     $(".btn1").click(function(){
+        //         $(".btn1").parent().next()
+        //         .css({"color" : "#f00"});
+        //     });
+
+        //     $(".btn2").on({ //.on 메소드를 활용한 그룹 이벤트 등록
+        //         "mouseover focus" : function(){
+        //              $(".btn2").parent().next()
+        //             .css({"color" : "#0f0"});
+        //         },
+        //         "mouseout blur" : function(){
+        //              $(".btn2").parent().next()
+        //             .css({"color" : "#00f"});
+        //         }
+        //     })
+            
+        // // $(".btn1").click(); //강제 이벤트 등록. 처음에 당연히 체크되어 있어야 하는 이벤트 만들 경우 이용
+        // // $(".btn2").trigger("mouseover");
+        // $(".btn1").off("click"); //이벤트 제거. click 했을 때 발생하는 이벤트를 없앰
+        // $(".btn2").off("mouseover focus"); //마우스 포커스 이벤트 삭제. 블러 이벤트는 유지.
+        
+        // })
+            // $(function(){
+            //     $(document).ready(function(){
+            //         var h1 = $(".img1").height();
+            //         console.log("ready :", h1);//ready : 값
+            //     });
+            //     $(window).load(function(){
+            //         var h2 = $(".img1").height();
+            //         console.log("load :", h2);//load : 값
+            //     });
+            // })
+
+    // $(function(){
+    //     $(".btn1").click(function(e){
+    //         e.preventDefault(); //기존 이벤트 막기
+    //         $(".txt1")
+    //         .css({"background-color" : "#ff0"});
+    // })
+    //     $(".btn2").on("click", function(e){
+    //         //e.preventDefault();
+    //         $(".txt2")
+    //         .css({"background-color" : "#0f0"});
+    // })
+    //     $(".btn3").on("dblclick", function(){
+    //         //e.preventDefault();
+    //         $(".txt3")
+    //         .css({"background-color" : "#f00"});
+    // })
+    // })
+
+    // $(function(){
+    //     $(".btn1").on({//on 으로 mouseover, out 둘다 지정해줘야함.
+    //         "mouseover" : function(){
+    //             $(".txt1")
+    //             .css({"background-color" : "yellow"});
+    //         },
+    //         "mouseout" : function(){
+    //             $(".txt1")
+    //             .css({"background-color" : "none"});//기본값을 모를 경우엔 배경색에 맞게  white.
+            
+    //     }
+    // })
+    //     $(".btn2").hover(function(){//hover특성상 색만 지정해주면 됨.
+    //             $(".txt2")
+    //             .css({"background-color" : "aqua"});
+    //         }, function(){
+    //             $(".txt2")
+    //             .css({"background-color" : "white"});
+    //         }     
+    //     )
+    // })
+//})
+
+// $(function(){
+//     $(document).on("mousemove", function(e){
+//         $(".posX").text(e.pageX);
+//         $(".posY").text(e.pageY);
+//     })
+// })
+
+// $(window).on("scroll", function(){
+//     var sc_top = $(this).scrollTop();//사람들이 컨텐츠를 스크롤을 안해서 안보는건지, 재미없어서 안보는건지 체크위해 쓸 수 있음.
+//     var sc_left = $(this).scrollLeft();
+
+//     $(".top").text(sc_top);
+//     $(".left").text(sc_left);
+// }
+// )
+
+// $(function(){
+//     $("#user_id_1, #user_pw_1").on("focus",//focus blur는 입력칸만 바뀜
+//     function(){
+//         $(this).css({"background-color" : "pink"});
+//     });
+//     $("#user_id_1, #user_pw_1").on("blur",
+//     function(){
+//         $(this).css({"background-color" : "blue"});
+//     });
+
+//     $("#frm_2").on("focusin",//focusin out은 배경까지 전부다 바뀜
+//     function(){
+//         $(this).css({"background-color" : "pink"});
+//     });
+//     $("#frm_2").on("focusout",
+//     function(){
+//         $(this).css({"background-color" : "blue"});
+//     });
+// })
+
+$(function(){
+    $("#btn1")
+    .data({"text":"javascript"})
+    .on({
+        "mouseover":over, //올리면 over함수 호출
+        "mouseout":out, //벗어나면 out함수 호출
+    })
+    $("#btn2")
+    .data({"text":"welcome!"})
+    .on({
+        "mouseover focus":over,//tab키를 이용하여 focus까지 되었을 때도 텍스트를 띄워준다
+        "mouseout blur":out,//키보드 접근성을 고려한 이벤트라고 보면 됨.
+    })
+    function over(){
+        $(".txt").text($(this).data("text"))
+    }
+    function out(){
+        $(".txt").text("")
+    }
+})
+
+
+    </script>
+<!-- <style>
+    body{
+        height : 10000px;
+        width: 5000px;
+    }
+    #wrap{
+        position : fixed;
+        left : 10px; top : 10px;
+    }
+</style> -->
+
+</head>
+<body>
+    <!-- <p>
+        <img src="http://place-hold.it/300x300" class = "img1">버튼1</img>
+    </p>
+    <p>
+        <button class = "btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>내용1.1</p>
+    <p>
+        <button class = "btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+    <p>내용2.2</p> -->
+
+    <!-- <p><a href = "http://www.naver.com" class = "btn1">버튼1</a></p>
+    <p class = "txt1">내용1</p>
+    <p><a href = "http://www.naver.com" class = "btn2">버튼2</a></p>
+    <p class = "txt2">내용2</p>
+    <p><a href = "http://www.naver.com" class = "btn3">버튼3</a></p>
+    <p class = "txt3">내용3</p> -->
+
+    <!-- <p><button class = "btn1">mouseover/mouseout</button></p>
+    <p class = "txt1">내용1</p>
+    <p><button class = "btn2">hover</button></p>
+    <p class = "txt2">내용2</p> -->
+<!-- 
+    <h1>mousemove</h1>
+    <p>X : <span class = "posX">0</span>px</p>
+    <p>Y : <span class = "posY">0</span>px</p> -->
+
+<!-- <div id = "wrap">
+    <p>scrollTop : <span class = "top">0</span>px</p>
+    <p>scrollleft : <span class = "left">0</span>px</p>
+</div> -->
+
+<!-- <h1>focus / blur</h1>
+<form action = "#">
+    <p>
+        <label for = "user_id_1">ID</label>
+        <input type = "text" name = "user_id_1" id = "user_id_1">
+    </p>
+    <p>
+        <label for = "user_pw_1">PW</label>
+        <input type = "password" name = "user_pw_1" id = "user_pw_1">
+    </p>
+</form>
+
+<h1>focus in / focus out</h1>
+<form action = "#" id = "frm_2">
+    <p>
+        <label for = "user_id_2">ID</label>
+        <input type = "text" name = "user_id_2" id = "user_id_2">
+    </p>
+    <p>
+        <label for = "user_pw_2">PW</label>
+        <input type = "password" name = "user_pw_2" id = "user_pw_2">
+    </p>
+</form> -->
+
+<p><button id = "btn1">버튼1</button></p>
+<p><button id = "btn2">버튼2</button></p>
+<p class = "txt"></p>
+</body>
+</html>
