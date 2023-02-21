@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "js/jquery.js"></script>
+    <!-- <script>
+        $(function(){
+            $(".btn1").on("click", function(){
+                $(".txt1").animate({//animate : 요소 선택, 메소드, 스타일, 소요시간, 투명도, 콜백함수
+                    marginLeft: "+=500px",
+                    fontSize: "50px"
+                },
+                2000, "linear", function(){
+                    alert("모션완료");
+                })
+        })
+
+    $(".btn2").on("click", function(){
+        $(".txt2").animate({
+            marginLeft: "+=50px"
+        },1000);
+    })
+})
+    </script>
+    <style>
+        .txt1{background: red;}
+        .txt2{background: aqua;}
+    </style> -->
+<!-- <script>
+    $(function(){
+        $(".txt1")
+        .animate({marginLeft: "200px"}, 1000)
+        .animate({marginTop: "200px"}, 1000)
+        .queue(function(){
+            $(this).css({background : "red"})
+            $(this).dequeue();//브레이크를 거는 것이라 보면 됨
+        })
+        .animate({marginLeft: "0px"}, 1000)
+        .animate({marginTop: "0px"}, 1000)
+    })
+</script>
+<style>
+    *{margin:0px;}
+    .txt1{width : 50px; text-align: center;
+    background-color: blue;}
+</style> -->
+
+<script>
+    $(function(){
+        $(".txt1")
+        .animate({marginLeft: "100px"}, 1000)
+        .animate({marginLeft: "400px"}, 1000)
+        .animate({marginLeft: "700px"}, 1000)
+
+        $(".txt2")
+        .animate({marginLeft: "100px"}, 1000)
+        .animate({marginLeft: "400px"}, 1000)
+        .animate({marginLeft: "700px"}, 1000)
+        $(".txt2").clearQueue(); //첫번째 애니메이트 제외하고 대기 애니메이션 제거
+    })
+
+    
+</script>
+<style>
+    .txt1, .txt2{width : 50px; text-align: center; background-color: blue}
+    .txt2{background-color: brown;}
+</style>
+
+</head>
+<body>
+
+    <!-- <p><button class = "btn1">버튼1</button></p>
+    <span class = "txt1">"500px이동"</span>
+    <p><button class = "btn2">버튼2</button></p>
+    <span class = "txt2">"50px이동"</span> -->
+    
+    <!-- <p class = "txt1">내용1</p> -->
+
+    <p class = "txt1">내용1</p>
+    <p class = "txt2">내용2</p>
+
+</body>
+</html>
