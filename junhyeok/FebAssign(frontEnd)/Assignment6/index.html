@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram FAQ</title>
+    <link rel="stylesheet" href="css.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+        // 첫번째 제이쿼리 로고를 움직이게 만드는 Queue
+        $(function(){
+            $(".movinglogo")
+            .animate({marginLeft : "100px"}, 1500)
+            .animate({marginTop : "100px"},1000)
+            .queue(function(){
+                $(this).dequeue();
+            })
+            .animate({marginLeft : 0}, 1000)
+            .animate({marginTop : 0},500);
+
+        // 두번째 제이쿼리 누르면 알림창이 나오는 버튼
+            $(".darkmode_btn").on("click", function () {
+            alert("준비중입니다.")
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="instagramlogo">
+        <img src="logo1.jpg" class = "movinglogo">
+        <img src="instaline1.jpg" class = "instaline">
+        <div class="darkmode">
+            <button class="darkmode_btn" type="button">
+                <span class="darkmode_span">🌗 다크 모드로 보기</span>
+            </button>
+        </div>
+        <a class ="logoline"> <b>Frequent Asked Questions</b>  </a>
+    </div>
+
+    <div class="bulletin-board">
+        
+        <div class="post-container">
+          <div class="post">
+            <div class="logo">
+              <img src="doit.jpg" alt="Logo 1">
+            </div>
+            <div class="post-content">
+              <h4>로그인을 했는데도 화면이 잘 보이지 않습니다.</h4>
+              <p>로그인 문제는 주로 최근 iOS 업데이트 문제로 생기는 경우가 많습니다. 캐시를 삭제하고 재설치해주세요.</p>
+            </div>
+          </div>
+      
+          <div class="post">
+            <div class="logo">
+              <img src="dont.jpg" alt="Logo 2">
+            </div>
+            <div class="post-content">
+              <h4>사진이 잘 올라가지 않아요.</h4>
+              <p>인스타그램은 폭력적이거나 선정적인 게시글을 금지합니다. 해당 고객은 사진을 15일간 사진을 올릴 수 없어요. 이는 인스타그램 내부 준법감시인의 판단에 따릅니다.</p>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="logo">
+              <img src="dont.jpg" alt="Logo 2">
+            </div>
+            <div class="post-content">
+              <h4> 차별적인 발언에 대해선 어떻게 대처하고 있나요? </h4>
+              <p> 인스타그램은 광범위한 범주로 이용자들의 차별적인 발언 및 가짜뉴스에 대해서 적극대응하고 있습니다!  </p>
+            </div>
+          </div>
+
+          <div class="post">
+            <div class="logo">
+              <img src="doit.jpg" alt="Logo 2">
+            </div>
+            <div class="post-content">
+              <h4> 자유로운 영상들을 올리고 싶어요.</h4>
+              <p>릴스는 미디어 특성상 짧은 영상들만을 허용합니다. 새로운 비디오 플랫폼이 3월 중순 오픈될 예정이에요!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const posts = document.querySelectorAll('.post');
+
+        posts.forEach(post => {
+        post.addEventListener('click', () => {
+            posts.forEach(p => {
+            p.classList.remove('selected');
+            });
+            post.classList.add('selected');
+        });
+        });
+      </script>
+</body>
+</html>
