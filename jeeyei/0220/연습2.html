@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 마우스 오버 - 이미지가 왼쪽에서 나타남</title>
+    <link rel="stylesheet" href="연습2.css" />
+    <script src = "js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.bbox').hover (
+                function(){
+                    $(this).find('span').stop().animate({
+                        width: '273px'
+                    })
+                },
+                function(){
+                    $(this).find('span').stop().animate({
+                        width: '0'
+                    })
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <article class = "bbox">
+            <span><img src = "images/Forest1.jpg"></span>
+            <img src = "images/forest.jpg">
+        </article>
+    </div>
+</body>
+</html>
