@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;500&display=swap');
+
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;}
+
+header {
+    background-color: #fa5858;
+    padding: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 25vh;
+/*     position: absolute;
+    top: 0; */
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-family: 'Lobster', cursive;
+    height: 10vh;
+    margin-bottom: 25px;
+    margin-left: 60px;
+    color: #fafafa;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fbfbfb;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f8d7d5;
+    color: #f64242;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-right: 100px
+}
+
+.login button {
+    background-color: #f5908e;
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.login > button > a {
+    color: #ffffff;
+}
+
+
+.login button:hover {
+    background-color: #ffd3d2;
+}
+
+.login > button > a:hover {
+    color:  #f64242;
+}
+
+
+.ask-button1 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 100px
+}
+
+.ask-button {
+    color: rgb(65, 65, 65);
+    background-color: #c2c2c2a6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.ask-button:hover {
+    color: rgb(255, 255, 255);
+    font-weight:500;
+    background-color: #c2c2c2a6;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.noticeBox {
+    width: 80vw;
+    height: 30vh;
+    margin-left: 10vw;
+    background-color: #ffffff;
+}
+
+.noticeBoxTop{
+    display: flex;
+    height: 50px;
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style:solid; 
+    border-top-color: rgb(182, 182, 182);
+    border-bottom-color: rgb(182, 182, 182);
+    color:rgb(0, 0, 0);
+    padding-left: 50px;
+}
+
+.noticeBoxTop > p > button{
+    border: none;
+    background-color:none;
+}
+
+.box {
+    background-color: #fdf2f2;
+    height: 150px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    margin: 3vw 20vh;
+    align-items: center;
+}
+
+.table thead th {
+    border: 1px solid pink;
+    border-width: 1px 0;
+}
+
+.table tbody td:nth-child(2) {
+    text-align: left;
+    font-size: 16px;
+}
+
+.table td:first-child, .table th:first-child {
+    width: 10%;
+}
+
+.table td:nth-child(3), .table th:nth-child(3) {
+    width: 30%;
+}
+
+.table td:nth-child(5), .table th:nth-child(4) {
+    width: 15%;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(253, 235, 233, 0.734);
+}
+
+.table tbody td a {
+    text-decoration: none;
+    color: black;
+}
+
+.table tbody td a:hover {
+    text-decoration: underline;
+}
+
+
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+    font-size: 20px;
+    color: rgb(104, 103, 103)
+}
+.pagination button {
+	background-color: #f99e97;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: 500;
+	margin: 0 20px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+.pagination button:hover {
+	background-color: #E53935;
+}
+
+
+
+
+/* 팝업 부분 */
+#notice_wrap{
+    position: sticky;
+    top: 0px;
+    width:100vw;
+    height: 50px;
+    background-color: #f7fac0;
+    z-index: 999;
+    
+}
+
+.closeWrap{
+    color:#342f2f;
+    padding-right: 30px;
+    height: 45px;
+    display: flex;
+    align-items: baseline;
+
+}
+
+
+.notice{
+    width: 70vw;
+    height: 20px;
+    margin-left:10vw;
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+}
+
+.closeWrap > label {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+
+.closeBtn {
+    display:inline-block;
+    border: none;
+    background-color: #f7fac0;
+    cursor:pointer;
+}
+
+.closeBtn:after{
+    display: inline-block; 
+    content: "\00d7"; 
+    font-size:24px; 
+    margin-left:5px;
+
+}

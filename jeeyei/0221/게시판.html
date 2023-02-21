@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게시판</title>
+        <link rel="stylesheet" href="게시판.css" />
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script>
+            $(function() {
+                if($.cookie("popup") == "none") {
+                        $("#notice_wrap").hide();
+                }
+            
+                var $expChk = $("#expiresChk");
+                $(".closeBtn").on("click", closePop);
+                
+                function closePop() {
+                    if($expChk.is(":checked")) {
+                        $.cookie("popup","none",{expires:1, path:"/"});  //1일 후 자동 소멸, path는 최상위 폴더에 저장
+                    }
+                    $("#notice_wrap").fadeOut("fast");
+                }  
+/*             });
+            $(function() { */
+                $(".btn2").hide();
+    
+                $(".btn1").on("click", function() {
+                    $(".box").slideUp(10, "linear",
+                    function() {
+                        $(".btn1").hide();
+                        $(".btn2").show();
+                    });
+                });
+                $(".btn2").on("click", function() {
+                    $(".box").slideDown(10, "linear",
+                    function() {
+                        $(".btn2").hide();
+                        $(".btn1").show();
+                    })
+                })
+/*             })
+
+            $(function() { */
+                let newLine = `<tr id = "newTr">
+                                <td>9</td>
+                                <td><a href="#">넷플릭스에 왜 디즈니 영화 없나요?????</a></td>
+                                <td>디즈니 플러스!!!</td>
+                                <td>3210</td>
+                                </tr>`
+
+                $(".ask-button").on("click", function() {
+                    $("#newTr").before(newLine)
+                })
+            })
+                
+            
+                                
+            
+
+        </script>
+    </head>
+    <body>
+        <div id="notice_wrap">
+            <div class="closeWrap">
+                <p class = "notice"> [공지사항]    양식에 맞춰 글을 작성해주세요. </p> 
+                <input type="checkbox" name="expiresChk" id="expiresChk">
+                <label for="expiresChk">하루 동안 이 창 열지않기</label>
+                <button type="button" class="closeBtn"></button>
+            </div>
+        </div> 
+
+
+        <header>
+            <div class="logo">
+                <h1>Disney world</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#general-forum">General forum</a></li>
+                    <li><a href="#qanda">Q&A</a></li>
+                </ul>
+                <div class="login">
+                    <button class ="login button" ><a href="login.html">Login</a></button>
+                </div>
+            </nav>
+        </header>
+        <div class="ask-button1">
+            <button class="ask-button" >Ask a question</button>
+        </div>
+
+        <div class="noticeBox">
+            <div class="noticeBoxTop">
+                <p> 공지사항 </p>            
+                <p>
+                    <button class="btn1"> ▲ </button>
+                    <button class="btn2"> ▼</button>
+                </p>
+            </div>
+            
+            <div class="box">
+                <div class="content">
+                        양식을 지켜 작성해주세요.<br>
+                        양식이 지켜지지 않아 게시판이 지저분합니다.<br>
+                        협조 요청드립니다.
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id = "newTr">
+                    <td>8</td>
+                    <td><a href="#">넷플릭스에 왜 디즈니 영화 없나요?</a></td>
+                    <td>디즈니 플러스</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="#">아무래도 지브리가 짱이다</a></td>
+                    <td>하야오</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="#">타이타닉 재개봉 보러 갈까요?</a></td>
+                    <td>제임스 메카론</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="#">아바타 2의 실패 요인</a></td>
+                    <td>제임스</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="#">디즈니 추천 영화 top 5</a></td>
+                    <td>월트 디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="#">인어공주 ost 이 노래 뭔가요?</a></td>
+                    <td>디즈니</td>
+                    <td>321</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">몬스터대학교 vs. 몬스터 주식회사</a></td>
+                    <td>마이크</td>
+                    <td>202</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">토이스토리 재밌나요?</a></td>
+                    <td>버즈</td>
+                    <td>111</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevPage">Prev</button>
+            <span id="currentPage"></span>
+            <button id="nextPage">Next</button>
+        </div>
+
+
+<!--         <div id="notice_wrap">
+            <div class="closeWrap">
+                <p class = "notice"> [공지사항]    양식에 맞춰 글을 작성해주세요. </p> 
+                <input type="checkbox" name="expiresChk" id="expiresChk">
+                <label for="expiresChk">하루 동안 이 창 열지않기</label>
+                <button type="button" class="closeBtn"></button>
+            </div>
+        </div>  -->
+    
+
+    
+    <script>
+        const tableRows = document.querySelectorAll('.table tbody tr');
+        const rowsPerPage = 5;
+        let currentPage = 1;
+        function showRows() {
+            for (let i = 0; i < tableRows.length; i++) {
+                if (i < (currentPage - 1) * rowsPerPage || i >= currentPage * rowsPerPage) {
+                    tableRows[i].style.display = 'none';
+                } else {
+                    tableRows[i].style.display = '';
+                }
+            }
+            document.getElementById('currentPage').innerHTML = currentPage;
+        }
+        showRows();
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                showRows();
+            }
+        });
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
+                currentPage++;
+                showRows();
+            }
+        });
+
+
+    </script>
+    </body>
+</html>
