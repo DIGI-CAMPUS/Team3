@@ -1,0 +1,85 @@
+    .instagramlogo{
+        display : flex;
+        justify-content : left;
+    }
+    .movinglogo{
+        float : left;
+        width : 50px;
+        height : 50px;
+    }
+    .instaline{
+        width : 180px;
+        height :60px;
+    }
+    .logoline{
+        margin-left : 100px;
+        font-size : 35px;
+        font-family : sans-serif; 
+        font-style : italic;
+    }
+    .darkmode_btn {
+        border-radius: 15px;
+        box-shadow: 0.5px 0.5px 2px 1px #eee;
+        padding: 15px;
+        background-color: #282828;
+        color: white;
+        margin-left: 10px;
+        margin-top: 5px;
+        border: none;
+      }
+    .dark {
+        background-color: #282828;
+        color: white;
+      }
+    
+    .bulletin-board {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    .bulletin-board h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    .post-container {
+    padding: 20px;
+    }
+
+    .post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+    .post:hover {
+    background-color: #f5f5f5;
+    }
+
+    .logo {
+    flex-shrink: 0;
+    margin-right: 10px;
+    }
+
+    .logo img {
+    max-width: 50px;
+    }
+
+    .post-content {
+    flex-grow: 1;
+    }
+
+    .post.selected {
+    width: 100%;
+    }
+
+    .post.selected .post-content {
+    padding: 20px;
+    }
